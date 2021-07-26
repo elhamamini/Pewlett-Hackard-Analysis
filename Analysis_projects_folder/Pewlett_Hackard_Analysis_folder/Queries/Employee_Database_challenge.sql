@@ -13,3 +13,11 @@ title
 INTO unique_titles
 FROM retirement_titles
 ORDER BY emp_no, to_date DESC;
+
+select * from  unique_titles;
+
+Select count(title),title
+into retiring_titles
+from unique_titles
+group by title
+order by count(title) Desc;
