@@ -6,4 +6,10 @@ on e.emp_no=ti.emp_no
 where e.birth_date between '1952-01-01' and '1955_12-31'
 order by e.emp_no;
 
-select * from  retirement_titles;
+select * from  retirement_titles;SELECT DISTINCT ON (emp_no) emp_no,
+first_name ,
+last_name ,
+title
+INTO unique_titles
+FROM retirement_titles
+ORDER BY emp_no, to_date DESC;
